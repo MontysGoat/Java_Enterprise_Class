@@ -1,0 +1,29 @@
+----------------------------------------------------------------
+Tue Jun 11 13:53:55 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016b-47ac-ccbe-00001cc4d408 
+on database directory C:\JHU with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=c:\Users\sesa361628\Documents\Classes\Java_Enterprise_Class\Modules\Module2\src
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jun 11 13:53:55 EDT 2019:
+Shutting down instance a816c00e-016b-47ac-ccbe-00001cc4d408 on database directory C:\JHU with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+----------------------------------------------------------------
+Tue Jun 11 13:53:55 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance e8afc026-016b-47ac-ccbe-00001cc4d408 
+on database directory C:\JHU with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=c:\Users\sesa361628\Documents\Classes\Java_Enterprise_Class\Modules\Module2\src
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

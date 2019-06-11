@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}",
+      "args": ["test3"],
+      "classPaths": ["C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
+                     "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/",
+                     "C:/Users/sesa361628/.m2/repository/com/oracle/ojdbc8/12.2.0.1/ojdbc8-12.2.0.1.jar",
+                     "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar"
+                    ],
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-App<mod1_art>",
+      "request": "launch",
+      "mainClass": "mod1.App",
+      "projectName": "mod1_art",
+      "classPaths": ["C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar"],
+      "args": ["test2"]
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitialContextExample",
+      "request": "launch",
+      "mainClass": "examples.jndi.InitialContextExample"
+    }
+  ]
+}
