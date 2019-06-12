@@ -6,15 +6,19 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Debug (Launch)",
+      "request": "launch",
+      "mainClass": ""
+    },
+    {
+      "type": "java",
       "name": "Debug (Launch) - Current File",
       "request": "launch",
       "mainClass": "${file}",
-      "args": ["test3"],
-      "classPaths": ["C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
-                     "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/",
-                     "C:/Users/sesa361628/.m2/repository/com/oracle/ojdbc8/12.2.0.1/ojdbc8-12.2.0.1.jar",
-                     "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar"
-                    ],
+      "preLaunchTask": "setDomainEnv",
+      "args": [
+        "test3"
+      ]
     },
     {
       "type": "java",
@@ -22,8 +26,12 @@
       "request": "launch",
       "mainClass": "mod1.App",
       "projectName": "mod1_art",
-      "classPaths": ["C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar"],
-      "args": ["test2"]
+      "classPaths": [
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar"
+      ],
+      "args": [
+        "test2"
+      ]
     },
     {
       "type": "java",
