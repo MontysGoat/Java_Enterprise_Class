@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+  xmlns=http://java.sun.com/xml/ns/j2ee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation= "http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>edu.jhu.jee.lf.HelloWorldServlet</servlet-class>
+    <init-param>
+      <param-name>first_name</param-name>
+      <param-value>LEONID</param-value>
+    </init-param>
+    <init-param>
+      <param-name>last_name</param-name>
+      <param-value>FELIKSON</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/jhu/*</url-pattern>
+  </servlet-mapping>
+</web-app>

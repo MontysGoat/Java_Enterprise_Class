@@ -6,38 +6,64 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Debug (Launch)",
-      "request": "launch",
-      "mainClass": ""
-    },
-    {
-      "type": "java",
       "name": "Debug (Launch) - Current File",
       "request": "launch",
       "mainClass": "${file}",
-      "preLaunchTask": "setDomainEnv",
-      "args": [
-        "test3"
-      ]
-    },
-    {
-      "type": "java",
-      "name": "Debug (Launch)-App<mod1_art>",
-      "request": "launch",
-      "mainClass": "mod1.App",
-      "projectName": "mod1_art",
-      "classPaths": [
-        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar"
-      ],
-      "args": [
-        "test2"
-      ]
-    },
-    {
-      "type": "java",
-      "name": "Debug (Launch)-InitialContextExample",
-      "request": "launch",
-      "mainClass": "examples.jndi.InitialContextExample"
+      "preLaunchTask": "echo",
+      "classPaths":[
+        
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+        "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/",
+        "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/*",
+        "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/*",
+        "C:/Program%20Files/Java/jdk1.8.0_181/lib/tools.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/server/lib/weblogic.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/modules/features/oracle.wls.common.nodemanager.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derbynet.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derbyclient.jar",
+        "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derby.jar",
+        "C:/SOAP_REST_Class_Programs/apache-cxf-3.2.6/lib/cxf-manifest.jar",
+        "C:/SOAP_REST_Class_Programs/jaxrs-ri-2.27/jaxrs-ri/lib/jersey-client.jar",
+        "C:/SOAP_REST_Class_Programs/jaxrs-ri-2.27/jaxrs-ri/lib/jersey-media-jaxb.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/server/lib/wlclient.jar"]
     }
+    // {
+    //   "type": "java",
+    //   "name": "Debug (Launch)-App<mod1_art>",
+    //   "request": "launch",
+    //   "mainClass": "mod1.App",
+    //   "projectName": "mod1_art",
+    //   "classPaths": [
+    //     "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+    //     "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/",
+    //     "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/classes/*",
+    //     "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/src/mod1_art/target/*",
+    //     "C:/Program%20Files/Java/jdk1.8.0_181/lib/tools.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/server/lib/weblogic.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/modules/features/oracle.wls.common.nodemanager.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derbynet.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derbyclient.jar",
+    //     "C:/Java_Enterprise_class_programs/Oracle_Old/wlserver/common/derby/lib/derby.jar",
+    //     "C:/SOAP_REST_Class_Programs/apache-cxf-3.2.6/lib/cxf-manifest.jar",
+    //     "C:/SOAP_REST_Class_Programs/jaxrs-ri-2.27/jaxrs-ri/lib/jersey-client.jar",
+    //     "C:/SOAP_REST_Class_Programs/jaxrs-ri-2.27/jaxrs-ri/lib/jersey-media-jaxb.jar",
+    //     "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+    //     "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
+    //     "C:/Oracle/Middleware/Oracle_Home/wlserver/server/lib/wlclient.jar"
+    //   ],
+    //   "args": [
+    //     "test2"
+    //   ]
+    // },
+    // {
+    //   "type": "java",
+    //   "name": "Debug (Launch)-InitialContextExample",
+    //   "request": "launch",
+    //   "mainClass": "examples.jndi.InitialContextExample"
+    // }
   ]
 }
