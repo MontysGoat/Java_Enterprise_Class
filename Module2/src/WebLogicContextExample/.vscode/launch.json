@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - WebLogicContextExample",
+      "request": "launch",
+      "mainClass": "examples.jndi.WebLogicContextExample"
+    }
+  ]
+}

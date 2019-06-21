@@ -110,6 +110,8 @@ public class WebLogicContextExample {
           Context.INITIAL_CONTEXT_FACTORY,
           "weblogic.jndi.WLInitialContextFactory"
         );
+        env.put(Context.SECURITY_PRINCIPAL, "weblogic");
+        env.put(Context.SECURITY_CREDENTIALS, "P4$sword");
 
         if (url != null) {
           // This property specifies the URL of the WebLogic Server that will

@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "App",
+      "classPaths": [
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/server/lib/",
+        "C:/Users/sesa361628/Documents/Classes/Java_Enterprise_Class/Modules/Module2/Mod2_retry/classes/",
+        "C:/Program%20Files/Java/jdk1.8.0_181/lib/tools.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar",
+        "C:/Oracle/Middleware/Oracle_Home/oracle_common/modules/net.sf.antcontrib_1.1.0.0_1-0b3/lib/ant-contrib.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/modules/features/oracle.wls.common.nodemanager.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/common/derby/lib/derbynet.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/common/derby/lib/derbyclient.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/common/derby/lib/derby.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
+        "C:/Oracle/Middleware/Oracle_Home/wlserver/server/lib/wlclient.jar",
+      ],
+      "preLaunchTask": "setDomainEnv"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "mod1.App",
+      "classPaths": [
+        "C:\\Users\\sesa361628\\Documents\\Classes\\Java_Enterprise_Class\\Modules\\Module2\\Mod2_retry\\classes",
+        "C:\\Oracle\\Middleware\\Oracle_Home\\wlserver\\server\\lib\\wlclient.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derby.jar",
+        "C:/Java_Enterprise_class_programs/db-derby-10.14.2.0-bin/lib/derbyclient.jar",
+      ],
+      "preLaunchTask": "setDomainEnv"
+    }
+  ]
+}
