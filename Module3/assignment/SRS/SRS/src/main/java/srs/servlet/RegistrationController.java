@@ -1,4 +1,4 @@
-package srs;
+package srs.servlet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;

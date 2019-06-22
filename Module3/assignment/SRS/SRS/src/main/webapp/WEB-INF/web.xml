@@ -4,11 +4,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation= "http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
   <servlet>
     <servlet-name>RegistrationController</servlet-name>
-    <servlet-class>srs.RegistrationController</servlet-class>
+    <servlet-class>srs.servlet.RegistrationController</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>LoginController</servlet-name>
-    <servlet-class>srs.LoginController</servlet-class>
+    <servlet-class>srs.servlet.LoginController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RegistrationController</servlet-name>
@@ -19,8 +19,4 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
-  <error-page>
-   <error-code>404</error-code>
-   <location>/ErrorHandler</location>
-</error-page>
 </web-app>
