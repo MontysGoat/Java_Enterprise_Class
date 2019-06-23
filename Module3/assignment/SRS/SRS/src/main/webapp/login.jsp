@@ -23,8 +23,7 @@
         <td><input type="text" name="password" /></td>
       </tr>
       <tr>
-        <td class="field"><input type="submit" name="submit" value="Login" /></td>
-        <td class="field"><input type="reset" name="reset" value="Reset" /></td>
+        <td class="field"><input type="submit" name="login" value="Login" /></td>
       </tr>
     </table>
     <br>
@@ -32,7 +31,7 @@
     <h2>For new users, please register first</h2>
     <table>
       <tr>
-        <td class="field"><input type="submit" name="register" value="Register" /></td>
+        <td class="field"><input type="submit" name="linkToRegistration" value="Register" /></td>
       </tr>
     </table>
   </form>
