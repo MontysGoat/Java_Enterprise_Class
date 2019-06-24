@@ -17,8 +17,9 @@ public class Update {
 
   public static void registrar(Connection conn, Registrar registrar) throws SQLException {
     String query = "UPDATE REGISTRAR " 
-                 + "SET NUMBER_STUDENTS_REGISTERED = " + registrar.getNumber_students_registered() 
-                 + "WHERE COURSEID = " + registrar.getCourseId() + ";";
+                 + "SET NUMBER_STUDENTS_REGISTERED = " + registrar.getNumber_students_registered() + " "
+                 + "WHERE COURSEID = " + registrar.getCourseId();
+                 System.out.println(query);
     Execute.update(conn, query);
   }
 

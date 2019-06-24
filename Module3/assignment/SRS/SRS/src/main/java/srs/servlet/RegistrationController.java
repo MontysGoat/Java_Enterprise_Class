@@ -25,12 +25,14 @@ import srs.database.*;
 public class RegistrationController extends HttpServlet {
    private String dataSourceName;
    private String wlsURL;
+   private int classSizeLimit;
 
    public void init(ServletConfig servletConfig) throws ServletException {
       super.init(servletConfig);
       dataSourceName = getInitParameter("data_source_name");
       wlsURL = getInitParameter("web_logic_server_address");
       System.out.println("WLSURL is " + wlsURL);
+      classSizeLimit = Integer.parseInt(getInitParameter("classSizeLimit"));
    }
 
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -70,7 +72,44 @@ public class RegistrationController extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
             rd.include(request, response);
             break;
-         } 
+         } else if (paramName.equals("availableCourses")) {
+            try {
+               if (courseIsAvailable(paramValues.get(0))) {
+                  out.println("Successfully Registered!");
+               } else {
+                  out.println("No more spaces available in that course.");
+               }
+            } catch (NamingException e) {
+               out.println("Unable to connect to database. Details: " + e.getMessage());
+            } catch (SQLException e) {
+               out.println("Could not execute database update. Details: " + e.getMessage() + e.getStackTrace());
+            }
+         }
+      }
+
+   }
+
+   private boolean courseIsAvailable(String paramValue) throws NamingException, SQLException {
+      Connection conn;
+      int courseId = Integer.parseInt(paramValue);
+      conn = ConnectionSupplier.getConnection(dataSourceName, wlsURL);
+      List<Registrar> registrars = (List<Registrar>) Lookup.registrars(conn);
+      System.out.println("Got registrars");
+      Registrar registrar = registrars.stream().filter(r -> r.getCourseId() == courseId).findFirst().orElse(null);
+      System.out.println("registrar: " + registrar.getCourseId());
+      if (registrar == null) {
+         return false;
+      } else {
+         int numberRegistered = registrar.getNumber_students_registered();
+         System.out.println("number registered: " + numberRegistered);
+         if (registrar.getNumber_students_registered() >= classSizeLimit) {
+            return false;
+         } else {
+            registrar.setNumber_students_registered(numberRegistered + 1);
+            System.out.println(numberRegistered + 1);
+            Update.registrar(conn, registrar);
+            return true;
+         }
       }
 
    }
@@ -89,7 +128,7 @@ public class RegistrationController extends HttpServlet {
          out.println("Could not connect to database server. Try again later. Further Details: " + e.getExplanation()
                + e.getMessage() + e.getCause());// TO-DO: change to HTTP error page
       } catch (SQLException e) {
-         out.println("Database schema is corrupted.");// TO-DO: change to HTTP error page
+         out.println("Database schema is corrupted. Details: " + e.getMessage() + e.getStackTrace());// TO-DO: change to HTTP error page
       } catch (ServletException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();

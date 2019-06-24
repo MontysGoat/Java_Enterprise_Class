@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h2>Choose Course:</h2>>
+  <h2>Choose Course:</h2>
 
   <form action="register" method="POST">
 

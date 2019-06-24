@@ -26,13 +26,11 @@ import srs.database.*;
 public class RegistrarController extends HttpServlet {
   private String dataSourceName;
   private String wlsURL;
-  private int classSizeLimit;
 
   public void init(ServletConfig servletConfig) throws ServletException {
     super.init(servletConfig);
     dataSourceName = getInitParameter("data_source_name");
     wlsURL = getInitParameter("web_logic_server_address");
-    classSizeLimit = Integer.parseInt(getInitParameter("classSizeLimit"));
     System.out.println("WLSURL is " + wlsURL);
   }
 

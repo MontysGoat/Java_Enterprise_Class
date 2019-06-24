@@ -38,7 +38,7 @@ public class Lookup {
   }
 
   public static Collection<Registrar> registrars(Connection conn) throws SQLException {
-    ResultSet registrarResults = getResults(conn, "REGISTRSR");
+    ResultSet registrarResults = getResults(conn, "REGISTRAR");
     List<Registrar> registrars = new ArrayList<Registrar>();
     while (registrarResults.next()){
       Registrar registrar = getRegistrarRow(registrarResults);

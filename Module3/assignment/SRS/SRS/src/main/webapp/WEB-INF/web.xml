@@ -13,6 +13,10 @@
       <param-name>web_logic_server_address</param-name>
       <param-value>t3://localhost:7001</param-value>
     </init-param>
+    <init-param>
+      <param-name>classSizeLimit</param-name>
+      <param-value>2</param-value>
+    </init-param>
   </servlet>
   <servlet>
     <servlet-name>LoginController</servlet-name>
@@ -33,10 +37,6 @@
   <servlet>
     <servlet-name>RegistrarController</servlet-name>
     <servlet-class>srs.servlet.RegistrarController</servlet-class>
-    <init-param>
-      <param-name>classSizeLimit</param-name>
-      <param-value>2</param-value>
-    </init-param>
     <init-param>
       <param-name>data_source_name</param-name>
       <param-value>jhuDataSource</param-value>
