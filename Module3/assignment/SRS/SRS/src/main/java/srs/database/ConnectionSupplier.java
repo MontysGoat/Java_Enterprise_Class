@@ -8,7 +8,7 @@ import javax.naming.*;
 import javax.sql.DataSource;
 
 public class ConnectionSupplier {
-  public static Connection GetConnection(String source, String url) throws NamingException, SQLException {
+  public static Connection getConnection(String source, String url) throws NamingException, SQLException {
     Connection conn = null;
     Context ctx = null;
     Hashtable env = new Hashtable();

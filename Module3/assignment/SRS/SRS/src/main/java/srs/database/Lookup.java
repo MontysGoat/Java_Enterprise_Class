@@ -3,6 +3,8 @@ package srs.database;
 import javax.naming.*;
 import javax.sql.DataSource;
 
+import srs.bean.Course;
+import srs.bean.Registrar;
 import srs.bean.Student;
 
 import java.util.*;
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class Lookup {
 
-  public static Collection<Student> Students(Connection conn) throws SQLException {
+  public static Collection<Student> students(Connection conn) throws SQLException {
     ResultSet studentResults = getResults(conn, "STUDENT");
     List<Student> students = new ArrayList<Student>();
     while (studentResults.next()){
@@ -23,6 +25,40 @@ public class Lookup {
       students.add(student);
     }
     return students;
+  }
+
+  public static Collection<Course> courses(Connection conn) throws SQLException {
+    ResultSet courseResults = getResults(conn, "COURSES");
+    List<Course> courses = new ArrayList<Course>();
+    while (courseResults.next()){
+      Course course = getCourseRow(courseResults);
+      courses.add(course);
+    }
+    return courses;
+  }
+
+  public static Collection<Registrar> registrars(Connection conn) throws SQLException {
+    ResultSet registrarResults = getResults(conn, "REGISTRSR");
+    List<Registrar> registrars = new ArrayList<Registrar>();
+    while (registrarResults.next()){
+      Registrar registrar = getRegistrarRow(registrarResults);
+      registrars.add(registrar);
+    }
+    return registrars;
+  }
+  
+  private static Registrar getRegistrarRow(ResultSet rs) throws SQLException {
+    Registrar registrar = new Registrar();
+    registrar.setCourseId(rs.getInt("COURSEID"));
+    registrar.setNumber_students_registered(rs.getInt("NUMBER_STUDENTS_REGISTERED"));
+    return registrar;
+  }
+
+  private static Course getCourseRow(ResultSet rs) throws SQLException {
+    Course course = new Course();
+    course.setCourseId(rs.getInt("COURSEID"));
+    course.setCourse_name(rs.getString("COURSE_NAME"));
+    return course;
   }
 
   private static Student getStudentRow(ResultSet rs) throws SQLException {

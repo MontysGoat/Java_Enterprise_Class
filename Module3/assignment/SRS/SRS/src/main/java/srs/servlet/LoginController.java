@@ -91,8 +91,8 @@ public class LoginController extends HttpServlet {
   }
 
   private Collection<Student> GetRegisteredStudents() throws NamingException, SQLException {
-    try (Connection conn = ConnectionSupplier.GetConnection(dataSourceName, wlsURL)) {
-      return Lookup.Students(conn);
+    try (Connection conn = ConnectionSupplier.getConnection(dataSourceName, wlsURL)) {
+      return Lookup.students(conn);
     }
   }
 }
