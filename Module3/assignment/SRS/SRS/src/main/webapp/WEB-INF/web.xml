@@ -15,7 +15,7 @@
     </init-param>
     <init-param>
       <param-name>classSizeLimit</param-name>
-      <param-value>2</param-value>
+      <param-value>5</param-value>
     </init-param>
   </servlet>
   <servlet>
@@ -23,7 +23,7 @@
     <servlet-class>srs.servlet.LoginController</servlet-class>
     <init-param>
       <param-name>login_attempt_limit</param-name>
-      <param-value>2</param-value>
+      <param-value>3</param-value>
     </init-param>
     <init-param>
       <param-name>data_source_name</param-name>
